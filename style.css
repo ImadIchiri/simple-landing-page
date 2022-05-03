@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+
+.screenshot {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Start About Section */
+section.about {
+    padding: 60px;
+    min-height: 50vh;
+    width: 100%;
+    background-color: #088dff;
+    background-image: linear-gradient(
+        -15deg,
+        #e1ddd9 50%,
+        #088dff 50%
+    );
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.about .container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+}
+section.about .container .image {
+    position: relative;
+}
+section.about .container .image h1 {
+    position: relative;
+    margin: 0;
+    position: absolute;
+    width: 255px;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+    color: #fff;
+    text-shadow: 5px 3px 0px #000;
+    cursor: pointer;
+}
+section.about .container .image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+@media (max-width: 1034px) {
+    section.about {
+        background-image: linear-gradient(
+        -90deg,
+        #fff 50%,
+        #088dff 50%
+    );
+        background-image: linear-gradient(
+        -90deg,
+        #e1ddd9 50%,
+        #088dff 50%
+    );
+    }
+    section.about .container {
+        flex-direction: column;
+    }
+    section.about .container .image {
+        max-width: 350px;
+        max-height: 350px;
+        border-radius: 50%;
+        margin-bottom: 45px;
+    }
+    section.about .container .image img {
+        transition: .8s ease-in-out;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    section.about .container .image img:hover {
+        transform: rotate(360deg);
+    }
+    section.about .container .image h1 {
+        bottom: -38px;
+    }
+}
+section.about .container .text-container {
+    min-width: 300px;
+    padding: 32px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 10px #777;
+}
+section.about .container .text-container .text h1 {
+    font-size: 2.1rem;
+    margin-bottom: 28px;
+}
+section.about .container .text-container .text p {
+    margin-bottom: 28px;
+    line-height: 1.4;
+}
+section.about .container .text-container .contact {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+section.about .container .text-container .contact span {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: #000;
+    cursor: pointer;
+}
+@media (max-width: 425px) {
+    section.about {
+        padding: 60px 20px;
+    }
+    section.about .container .image img {
+        width: 200px;
+        height: 200px;
+    }
+    section.about .container .text-container .text h1 {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    section.about .container .text-container .contact {
+        justify-content: center;
+    }
+}
+/* End About Section */
+/* Start My Work Section */
+section.work {
+    padding: 60px 100px;
+    width: 100%;
+}
+section.work h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 28px;
+}
+section.work .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: center;
+    gap: 35px;
+}
+section.work .container .card {
+    height: 400px;
+    box-shadow: 10px 10px 10px #898080;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    overflow: hidden;
+    border-radius: 30px;
+}
+section.work .container .card .image {
+    background-color: red;
+    height: 260px;
+    display: grid;
+    place-items: center;
+}
+section.work .container .card:hover {
+    transform: scale(1.05) rotate(-3deg);
+}
+section.work .container .card .text {
+    padding: 20px;
+    height: 140px;
+}
+section.work .container .card .text header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+section.work .container .card .text header h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+section.work .container .card .text header .icons {
+    width: fit-content;
+    display: flex;
+    gap: 12px;
+}
+section.work .container .card .text header .icons span {
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background-color: #000;
+}
+/* End My Work Section */
+/* Start Footer Section */
+footer.footer {
+    width: 100%;
+    background-color: #088dff;
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+    flex-wrap: wrap;
+    column-gap: 100px;
+}
+footer.footer .text {
+    max-width: 400px;
+}
+footer.footer .text h3 {
+    font-weight: 300;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 12px;
+}
+footer.footer .text p {
+    color: #fff;
+    line-height: 1.5;
+    margin: 12px 0;
+}
+footer.footer .text .contact {
+    display: flex;
+    align-items: center;
+}
+footer.footer .text .contact > span {
+    height: 18px;
+    width: 18px;
+    background-color: #DDD;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+footer.footer .text .contact p span {
+    font-size: 1.5rem;
+    text-shadow: 3px 1px 0px blue;
+    cursor: pointer;
+}
+footer.footer .image {
+    max-width: 400px;
+}
+footer.footer .image img {
+    max-width: 100%;
+}
+/* End Footer Section */
